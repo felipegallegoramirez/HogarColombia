@@ -1,0 +1,44 @@
+.icon__div {
+  text-align: center;
+  margin: 20px;
+}
+.icon__div .active {
+  background-color: #31aa52;
+}
+
+.icon__div div {
+  display: inline-block;
+  height: 3px;
+  width: 200px;
+  background-color: #0005;
+  margin: 0px 10px 20px 10px;
+}
+
+span {
+  color: white;
+  font-size: 40px;
+  background-color: #0005;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.center {
+  text-align: center;
+  margin: 0px 0px 400px 0px;
+}
+
+.center span {
+  text-align: center;
+  color: #31AA52;
+  font-size: 150px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 20px;
+}
+
+.title {
+  font-size: 150%;
+  color: #000d;
+  margin: 10px 5px;
+}

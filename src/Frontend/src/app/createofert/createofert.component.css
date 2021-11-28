@@ -1,0 +1,236 @@
+.icon__div{
+    text-align: center;
+    margin: 20px;
+    
+}
+.icon__div .active{
+    background-color: #31AA52;
+}
+
+.icon__div div{
+display: inline-block;
+height: 3px;
+width: 200px;
+background-color: #0005;;
+margin: 0px 10px 20px 10px;
+
+}
+
+span{
+    color: white;
+    font-size: 40px;
+    background-color:#0005 ;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.category{
+    width: 90vw;
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.category div{
+    display: inline-block;
+}
+
+.general div{
+    margin: 20px 0px;
+}
+.general{
+    width: 90vw;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.general .general__more div{
+    display: inline-block;
+}
+.general .general__more{
+    margin: 0px;
+}
+.general .general__more .contact{
+    display: inline-block;
+    margin: 0px;
+    width: auto;
+}
+
+
+.general .contact{
+    display: inline-block;
+    margin: 0px;
+    width: 100%;
+}
+
+
+.title{
+    font-size: 150%;
+    color:#000d;
+    margin: 0px 5px;
+}
+
+.general div p{
+    position: relative;
+    display: inline;
+    margin: -10px 15px;
+    z-index: 1000000000;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.general .contact p{
+    position: absolute;
+    display: inline;
+    margin: 5px 20px;
+    z-index: 1000000000;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.contact p{
+    position: absolute;
+    display: inline;
+    margin: 5px 20px;
+    z-index: 1000000000;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.general input{
+    margin: -10px 0px;
+    display: block;
+    width: 500px;
+    z-index: 0;
+    background-color: #0000;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 10px;
+}
+
+div select{
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    display: block;
+    z-index: 0;
+    background-color: #0000;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 10px;
+    margin: 15px 10px;
+}
+
+
+.general textarea{
+    margin: -10px 0px;
+    display: block;
+    z-index: 0;
+    background-color: #0000;
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #0005;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid white;
+	background-color: #31AA52;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin: 40px 0px 0px 0px;
+}
+
+input[type=file] {
+	border-radius: 20px;
+	border: 1px solid white;
+	background-color: #31AA52;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.posting{
+    width: 90vw;
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.posting {
+    width: 90vw;
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.file input{
+    display: none;
+}
+
+.features {
+    width: 90vw;
+    margin: 40px auto;
+    border-radius: 20px;
+    border: 1px solid #0005;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.features__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.features__grid input{
+ margin:12px 5px;
+ background-color: red;
+ width: 40px;
+ height: 20px;
+}
+.features__grid:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  .subtitle{
+    font-size: 120%;
+    color:#000d;
+    margin: 0px 5px;
+  }
+
+.button{
+    text-align: center;
+}
+
+.button p{
+    color: white;
+}
+
+.button button{
+    margin: 0px 0px 40px;
+    text-align: center;
+    width: 300px;
+}

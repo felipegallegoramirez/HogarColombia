@@ -1,0 +1,88 @@
+.filtre{
+ margin: 20px auto;
+ width: max-content;
+ border-radius: 20px;
+ padding: 10px;
+}
+
+.filtre div{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+
+.filtre div input{
+    display: inline-block;
+    height: 98%;
+    width: calc(100% - 60px);
+    background-color: #ffffff00;
+    border: 1px solid #00000055;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.filtre div span{
+    display: inline-block;
+    position: absolute;
+    font-size: 30px;
+    margin: 5px 10px;
+}
+
+.filtre div select{
+    margin: -10px 0px;
+    display: block;
+    z-index: 0;
+    background-color: #0000;
+    border-radius: 7px;
+    border: 1px solid #0005;
+    padding: 10px;
+}
+
+.container{
+    width: 90vw;
+    margin: 40px auto;
+}
+
+.container__text{
+    width: 80vw;
+    margin: 40px auto;
+}
+h2{
+    display: inline-block;
+}
+p{
+    display: inline-block;
+    margin: 0px 7px;
+}
+
+.container__div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80vw;
+    margin: 40px auto;
+}
+
+.card{
+    height: 320px;
+    background-color: #ddd;
+    width: 260px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px 0px;
+}
+.card .card__image{
+    border-radius: 10px 10px 0px 0px;
+    height: 150px;
+    background: url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
+    background-size:cover ;
+}
+.card .card__text{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card .card__text p{
+    margin: 10px 0px;
+    color: #111b;
+}

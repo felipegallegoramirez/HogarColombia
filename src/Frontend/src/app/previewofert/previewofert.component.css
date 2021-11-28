@@ -1,0 +1,151 @@
+p{
+    margin: 0px;
+}
+
+.title{
+    font-size: 150%;
+}
+.basic{
+    width: 80vw;
+    margin: 10px auto;
+}
+.basic2{
+    position: relative;
+    width: 60vw;
+    margin: -120px auto 120px;
+    background-color: white;
+    padding: 20px 0px;
+}
+.basic div{
+    display: inline-block;
+}
+
+.basic__left__text{
+    width: 100%;
+}
+
+.basic__left__text div{
+    width: 50%;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.basic__left__price{
+    text-align: end;
+    vertical-align: 5px;
+}
+.basic__left__images_inf div{
+    width: calc(26.6vw - 40px - 10px );
+    height: calc(26.6vw - 40px - 10px );
+    background:url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
+    margin: 10px 0px 0px 40px;
+    background-size:cover ;
+}
+
+
+.general_information{
+    margin: 50px 0px;
+    padding: 0px 40px;
+    width: 70vw;
+    box-sizing: border-box;
+}
+
+.general_information div{
+    margin: 0px 0px;
+    width: 50%;
+}
+.general_information div div{
+    width: 100%;
+    margin: 0px;
+}
+
+.general_information div div p:first-child{
+    color: #000000aa;
+}
+
+.general_information div div p{
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+.explanation{
+    padding: 0px 40px;
+    width: 60vw;
+    box-sizing: border-box;
+}
+
+.explanation .title{
+    margin: 10px 0px;
+
+}
+
+.charasterist{
+    margin: 50px 0px;
+    padding: 0px 40px;
+    width: 90vw;
+    box-sizing: border-box;
+}
+
+.charasterist div{
+    width: 50%;
+    display: inline-block;
+}
+.charasterist div p{
+    color:#000000aa ;
+}
+.charasterist div p:first-child{
+    color:black;
+}
+
+.icon__div {
+    text-align: center;
+    margin: 20px;
+  }
+  .icon__div .active {
+    background-color: #31aa52;
+  }
+  
+  .icon__div div {
+    display: inline-block;
+    height: 3px;
+    width: 200px;
+    background-color: #0005;
+    margin: 0px 10px 20px 10px;
+  }
+  
+  span {
+    color: white;
+    font-size: 40px;
+    background-color: #0005;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .button{
+    text-align: center;
+}
+
+.button p{
+    color: white;
+}
+
+.button button{
+    margin: 0px 0px 40px;
+    text-align: center;
+    width: 300px;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid white;
+	background-color: #31AA52;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin: 40px 0px 0px 0px;
+}
