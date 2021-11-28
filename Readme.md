@@ -1,7 +1,7 @@
 # App Web Ganadera MinTIC
 
 <p align="center">
-  <img src="">
+  <img src="https://github.com/felipegallegoramirez/HogarColombia/blob/main/misc/HouseColombia.png">
     <br>    
 </p>
 
@@ -19,7 +19,7 @@ Proyecto para la para la sistematizacion del proceso de administracion de una co
 
 **Análisis de Desarrollo** En esta fase nos enfocamos en realizar la Estructura, el Diagrama de Clases, los Requisitos de Usuario.
 
-- **Requisitos del Programa** [Documento PDF - Doc_Requisitos_De_Usuario.pdf]()
+- **Requisitos del Programa** [Documento PDF - Doc_Requisitos_De_Usuario.pdf](https://github.com/felipegallegoramirez/HogarColombia/blob/main/misc/Doc_Requisitos_De_Usuario.pdf)
 - **Diagrama de Clases** [Draw.io - DiagramaDeClases.draw.io](https://drive.google.com/file/d/15YQ1Pjvsx-hMFZ45h_QGGHqNLzXjobLQ/view?usp=sharing)
 
 - **Relacion paginas** [Draw.io - RelacionPaginas.drawio](https://drive.google.com/file/d/19YbADFk-yxqDse7gbhBWcBXPOX-ZyHxd/view?usp=sharing)
