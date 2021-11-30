@@ -1,4 +1,4 @@
-# App Web Ganadera MinTIC
+# App Web Hogar Colombia
 
 <p align="center">
   <img src="https://github.com/felipegallegoramirez/HogarColombia/blob/main/misc/HouseColombia.png">
