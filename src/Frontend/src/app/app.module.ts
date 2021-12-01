@@ -23,7 +23,7 @@ import { ListRequestAsesorComponent } from './list-request-asesor/list-request-a
 import { StatsComponent } from './stats/stats.component';
 import { DownloadComponent } from './download/download.component';
 import { AdmonComponent } from './admon/admon.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +49,7 @@ import { AdmonComponent } from './admon/admon.component';
     BrowserModule,
     MatSliderModule,
     MatIconModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent },
       { path: 'aboutus', component: AboutUsComponent },
