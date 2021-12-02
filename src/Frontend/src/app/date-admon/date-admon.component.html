@@ -2,10 +2,24 @@
 <div class="one">
     <div class="contact">
         <p class="title">Dates user</p>
-        <form [formGroup]="formExample" (submit)="send()">
+        <form [formGroup]="formExample" (submit)="send()" method="post" >
           <div>
             <p>Name / Surname</p>
             <input type="text" formControlName="name"/>
+          </div>
+          <div>
+            <p>Last name</p>
+            <input type="text" formControlName="lastName"/>
+          </div>
+
+          <div>
+            <p>Edad</p>
+            <input type="number" formControlName="edad" />
+          </div>
+          
+          <div>
+            <p>Genero</p>
+            <input type="text" formControlName="genero" />
           </div>
 
           <div>
@@ -38,7 +52,7 @@
 
           <div>
             <p>Mobile Number</p>
-            <input type="number" formControlName="number"/>
+            <input type="text" formControlName="number"/>
           </div>
     
           <div>
