@@ -49,7 +49,7 @@ export class Administrador extends Entity {
     type: 'number',
     required: true,
   })
-  edad: number;
+  edad: string;
 
 
   constructor(data?: Partial<Administrador>) {

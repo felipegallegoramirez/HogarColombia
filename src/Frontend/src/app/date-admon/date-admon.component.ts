@@ -8,13 +8,14 @@ import {administrador} from '../models/administrador'
   styleUrls: ['./date-admon.component.css']
 })
 export class DateAdmonComponent implements OnInit {
-   
-  admins: administrador[] = []
-  constructor() { }
-
+  
   ngOnInit(): void {
     this.obtenerAdmin()
   }
+
+  admins: administrador[] = []
+  constructor() { }
+
   formExample = new FormGroup({
 
     name: new FormControl('',[Validators.required]),
@@ -31,6 +32,7 @@ export class DateAdmonComponent implements OnInit {
 
   });
 
+  // metodo del boton login
   send():any{
     let email:string = this.formExample.value.email
     
@@ -49,6 +51,7 @@ export class DateAdmonComponent implements OnInit {
     this.formExample.reset()
   }
   
+  //metodo para obtener todos los administradores
   obtenerAdmin(): void{
     
     let url = "http://localhost:3000/administradors"
@@ -59,6 +62,7 @@ export class DateAdmonComponent implements OnInit {
 
   }
 
+  //metodo para guardar un nuevo admin
   registrarAdmin(): void{
     let url = "http://localhost:3000/administradors"
     let date = {

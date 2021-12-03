@@ -1,7 +1,5 @@
-
-
-export interface administrador{
-    id: String
+export interface Cliente{
+    id: string;
     nombre: String,
     apellido: String,
     celular: String,
@@ -9,5 +7,8 @@ export interface administrador{
     contrasena: String,
     genero: String,
     edad: String
+    activo: boolean,
+    departamento:string,
+    ciudad: string
+    direccion: string
 }
-

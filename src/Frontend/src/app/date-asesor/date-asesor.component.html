@@ -2,45 +2,76 @@
 <div class="one">
     <div class="contact">
         <p class="title">Dates user</p>
-        <form action="">
+        <form [formGroup]="formExample" (submit)="send()">
           <div>
-            <p>Name / Surname</p>
+            <p>Name</p>
             <input type="text" />
           </div>
 
           <div>
-            <p>email</p>
-            <input type="email" />
+          <p>Last name</p>
+          <input type="text" formControlName="lastName"/>
           </div>
-
+    
+          <div>
+            <p>Edad</p>
+            <input type="number" formControlName="edad" />
+          </div>
+    
+          <div class="contact__direction">
+            <p>Genero</p>
+            <select id="departament" formControlName="genero">
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+    
+          <div>
+            <p>email</p>
+            <input type="email" formControlName="email" />
+          </div>
+    
+          <div>
+            <p>password</p>
+            <input type="password" formControlName="password" />
+          </div>      
+    
           <div>
             <div class="contact__direction">
               <p>Departament</p>
-              <select id="departament">
+              <select id="departament" formControlName="departament">
                 <option value="Antioquia">Antioquia</option>
                 <option value="Cundinamarca">Cundinamarca</option>
               </select>
             </div>
+    
             <div class="contact__direction2">
               <p>City</p>
-              <select id="city">
+              <select id="city" formControlName="city">
                 <option value="Medellin">Medellin</option>
                 <option value="Itagui">Itagui</option>
               </select>
             </div>
           </div>
+    
           <div>
             <p>Mobile Number</p>
-            <input type="number" />
+            <input type="text" formControlName="number" />
           </div>
     
           <div>
             <p>Identification</p>
-            <input type="text" />
+            <input type="text" formControlName="Identification"/>
           </div>
+    
           <div class="contact__mensage">
             <p>Address</p>
-            <textarea></textarea>
+            <input formControlName="address"/>
+          </div>
+    
+          <div class="button">
+            <button [disabled]="!formExample.valid">Login</button>
           </div>
         </form>
       </div>
