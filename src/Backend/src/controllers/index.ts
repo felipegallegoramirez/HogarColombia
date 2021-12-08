@@ -25,3 +25,4 @@ export * from './inmueble.controller';
 export * from './recuperar-contrasena.controller';
 export * from './registro-categoria.controller';
 export * from './solicitud-cliente.controller';
+export * from './subir-imagenes.controller';
