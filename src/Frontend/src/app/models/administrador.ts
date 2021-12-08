@@ -1,7 +1,7 @@
 
 
 export interface administrador{
-    id: String
+    id: String,
     nombre: String,
     apellido: String,
     celular: String,

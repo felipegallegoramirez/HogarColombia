@@ -1,5 +1,6 @@
 export interface Cliente{
-    id: string;
+    id: string,
+    rol:string,
     nombre: String,
     apellido: String,
     celular: String,

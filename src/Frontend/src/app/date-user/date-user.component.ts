@@ -92,6 +92,8 @@ export class DateUserComponent implements OnInit {
     .then(mensaje => {
       console.log(mensaje)
     })
+
+    window.location.replace("http://localhost:4200/login");
   }
 
 }
