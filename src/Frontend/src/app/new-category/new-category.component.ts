@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryView } from '../models/CategoryView'
+import { Category} from '../models/Category'
 
 @Component({
   selector: 'app-new-category',

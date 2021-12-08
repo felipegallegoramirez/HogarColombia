@@ -22,6 +22,19 @@ export class Inmueble extends Entity {
     type: 'string',
     required: true,
   })
+  title: string;
+
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  description: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
   ciudad: string;
 
   @property({
@@ -35,6 +48,13 @@ export class Inmueble extends Entity {
     required: true,
   })
   tipoOferta: string;
+
+  
+  @property({
+    type: 'string',
+    required: true,
+  })
+  general: string[];
 
   @property({
     type: 'array',

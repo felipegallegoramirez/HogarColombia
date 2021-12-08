@@ -24,6 +24,7 @@ import { StatsComponent } from './stats/stats.component';
 import { DownloadComponent } from './download/download.component';
 import { AdmonComponent } from './admon/admon.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import { ReactiveFormsModule } from '@angular/forms';
       { path: 'stats', component: StatsComponent },
       { path: 'download', component: DownloadComponent },
       { path: 'admon', component: AdmonComponent },
-    ])
+    ]),
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
