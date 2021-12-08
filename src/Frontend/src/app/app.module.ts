@@ -24,6 +24,7 @@ import { StatsComponent } from './stats/stats.component';
 import { DownloadComponent } from './download/download.component';
 import { AdmonComponent } from './admon/admon.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MenuRolesDirective } from './menu-roles.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     StatsComponent,
     DownloadComponent,
     AdmonComponent,
+    MenuRolesDirective,
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,6 @@ export class DateAdmonComponent implements OnInit {
     this.obtenerAdmin()
   }
 
-  admins: administrador[] = []
   constructor() { }
 
   formExample = new FormGroup({
@@ -33,12 +32,11 @@ export class DateAdmonComponent implements OnInit {
   });
 
   // metodo del boton login
-  send():any{
+  async send(): Promise<void>{
     let email:string = this.formExample.value.email
-    
-    this.obtenerAdmin()
-    
-    let resultado = this.admins.find(function(element) {
+    let datos:administrador[] = await this.obtenerAdmin()
+  
+    let resultado = await datos.find(function(element) {
       return element.correo == email;
     });
     
@@ -47,25 +45,25 @@ export class DateAdmonComponent implements OnInit {
     }else{
       this.registrarAdmin()
     }
-    console.log(this.admins)
+
     this.formExample.reset()
   }
   
   //metodo para obtener todos los administradores
-  obtenerAdmin(): void{
+  async obtenerAdmin(): Promise<administrador[]>{
     
     let url = "http://localhost:3000/administradors"
-    fetch(url).then(response => response.json())
-    .then(data => {
-      this.admins = data
-    })
-
+    const respuesta = await fetch(url)
+    const datos = await respuesta.json() as administrador[]
+    return datos
+  
   }
 
   //metodo para guardar un nuevo admin
   registrarAdmin(): void{
     let url = "http://localhost:3000/administradors"
     let date = {
+      rol: "admin",
       nombre: this.formExample.value.name,
       apellido: this.formExample.value.lastName,
       celular: this.formExample.value.number,

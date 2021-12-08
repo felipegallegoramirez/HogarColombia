@@ -14,8 +14,6 @@ export class DateAsesorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  asesores: Asesor[] = []
-
   formExample = new FormGroup({
 
     name: new FormControl('',[Validators.required]),
@@ -33,12 +31,13 @@ export class DateAsesorComponent implements OnInit {
   });
 
   // metodo del boton login
-  send():any{
+
+  async send(): Promise<void>{
     let email:string = this.formExample.value.email
+    console.log("hola")
+    let datos: Asesor[]= await this.obtenerAsesores()
     
-    this.obtenerAsesores()
-    
-    let resultado = this.asesores.find(function(element) {
+    let resultado = datos.find(function(element) {
       return element.correo == email;
     });
     
@@ -47,19 +46,21 @@ export class DateAsesorComponent implements OnInit {
     }else{
       this.registrarAsesor()
     }
-    console.log(this.asesores)
+    console.log(datos)
     this.formExample.reset()
   }
-  
+
+
+
   //metodo para obtener todos los asesores
-  obtenerAsesores(): void{
+
+  async obtenerAsesores(): Promise<Asesor[]>{
     
     let url = "http://localhost:3000/asesors"
-    fetch(url).then(response => response.json())
-    .then(data => {
-      this.asesores = data
-    })
-
+    const respuesta = await fetch(url)
+    const datos = await respuesta.json() as Asesor[]
+    return datos
+  
   }
 
   //metodo para guardar un nuevo asesor
@@ -67,6 +68,7 @@ export class DateAsesorComponent implements OnInit {
   registrarAsesor(): void{
     let url = "http://localhost:3000/asesors"
     let date=  {
+      rol: "asesor",
       nombre: this.formExample.value.name,
       apellido: this.formExample.value.lastName,
       celular: this.formExample.value.number,

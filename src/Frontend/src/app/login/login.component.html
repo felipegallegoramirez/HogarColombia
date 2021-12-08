@@ -1,15 +1,25 @@
 <div class="container" id="container" >
 	<div class="form-container sign-up-container">
+		
+		<div class="formulario">
+			<p class="form__title"><b>Sign up</b></p>
+			<button (click)= "RegistroAsesor()" >As a advisor</button>
+			<hr class="divisor">
+			<button (click)= "RegistroCliente()"  >As a customer</button>
+		</div>
+<!-- 
 		<div class="formulario">
 			
-			<p class="form__title"><b>Sign Up</b></p>
-            <p class="left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nisi dicta omnis enim placeat ullam! Quis excepturi ut explicabo dolorum tempora, accusantium necessitatibus temporibus dolor dolores a! Pariatur, magnam nihil.</p>
-			<input type="email" placeholder="Email"id="email1" />
-			<input type="password" placeholder="Password" id="password1"/>
-			<button>Sign Up</button>
-            <p class="recover">Recover password</p>
+			<form [formGroup]="formRegistro" (submit)="Registro()" >
+				<p class="form__title"><b>Sign up</b></p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nisi dicta omnis enim placeat ullam! Quis excepturi ut explicabo dolorum tempora, accusantium necessitatibus temporibus dolor dolores a! Pariatur, magnam nihil.</p>
+				<input type="email" placeholder="Email"id="email2" formControlName="Remail"/>
+				<input type="password" placeholder="Password" id="password2" formControlName="Rpassword"/>
+				<button [disabled]="!formExample.valid" >Sign Up</button>
+			</form>
 
         </div>
+-->
     </div>
 
 
@@ -17,8 +27,16 @@
 	<div class="form-container sign-in-container">
 		<div class="formulario">
 			<form [formGroup]="formExample" (submit)="send()" >
+			
 				<p class="form__title"><b>Sign in</b></p>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nisi dicta omnis enim placeat ullam! Quis excepturi ut explicabo dolorum tempora, accusantium necessitatibus temporibus dolor dolores a! Pariatur, magnam nihil.</p>
+				<label for="Rol">Choose a Rol: </label>
+				
+				<select placeholder="Rol" id="Rol" formControlName="rol">
+					<option value="advisor">Advisor</option>
+					<option value="customer">Client</option>
+				</select>
+				<hr>
 				<input type="email" placeholder="Email"id="email1" formControlName="email"/>
 				<input type="password" placeholder="Password" id="password1" formControlName="password"/>
 				<button [disabled]="!formExample.valid" >Sign In</button>
