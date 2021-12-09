@@ -39,6 +39,7 @@ body{
   }
   .container__logo div p {
     display: block;
+    margin: 0px;
   }
   
   .header_container .header__left {
@@ -118,6 +119,7 @@ body{
   
   .footer__logo div p {
     display: block;
+    margin: 0px;
   }
   
   .footer__right {
