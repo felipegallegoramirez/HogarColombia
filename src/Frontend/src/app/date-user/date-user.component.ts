@@ -66,6 +66,7 @@ export class DateUserComponent implements OnInit {
   registrarAdmin(): void{
     let url = "http://localhost:3000/clientes"
     let date=  {
+      rol: "client",
       nombre: this.formExample.value.name,
       apellido: this.formExample.value.lastName,
       celular: this.formExample.value.number,

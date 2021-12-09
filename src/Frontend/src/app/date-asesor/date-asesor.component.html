@@ -5,7 +5,7 @@
         <form [formGroup]="formExample" (submit)="send()">
           <div>
             <p>Name</p>
-            <input type="text" />
+            <input type="text" formControlName="name" />
           </div>
 
           <div>
@@ -71,8 +71,9 @@
           </div>
     
           <div class="button">
-            <button [disabled]="!formExample.valid">Login</button>
+            <button  [disabled]="!formExample.valid" >Register</button>
           </div>
+
         </form>
       </div>
       <div class="right">

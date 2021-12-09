@@ -2,30 +2,29 @@
 <div class="one">
     <div class="contact">
         <p class="title">New Category</p>
-        <form action="">
+        <form [formGroup]="formExample" (submit)="send()" method="post" >
           <div>
-            <p>Name / Surname</p>
-            <input type="text" />
+            <p>Name</p>
+            <input type="text"  formControlName="name"/>
           </div>
 
           <div>
             <div class="contact__direction">
               <p>Category</p>
-              <select id="departament"  >
-                <option value="Antioquia"> </option>
-                <option value="Cundinamarca">Cundinamarca</option>
+              <select   formControlName="category"  >
+                <option *ngFor="let cato of cat;" value="{{cato.id}}"> {{cato.nombre}}</option>
               </select>
             </div>
           </div>
 
           <div>
             <p>Participation</p>
-            <input type="number" />
+            <input type="number"  formControlName="Participation" />
           </div>
 
           <div class="contact__mensage">
             <p>Desccription</p>
-            <textarea></textarea>
+            <textarea  formControlName="description"></textarea >
           </div>
         </form>
       </div>
@@ -33,6 +32,6 @@
     
     
     <div class="button">
-        <a href="/login"><button>Add</button></a>
+        <button (click)="send()" [disabled]="!formExample.valid" >Add</button>
     </div>
     

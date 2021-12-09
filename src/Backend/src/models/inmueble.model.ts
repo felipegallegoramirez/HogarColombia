@@ -51,8 +51,9 @@ export class Inmueble extends Entity {
 
   
   @property({
-    type: 'string',
-    required: true,
+    type: 'array',
+    itemType: 'string',
+    required: false,
   })
   general: string[];
 
@@ -66,14 +67,14 @@ export class Inmueble extends Entity {
   @property({
     type: 'array',
     itemType: 'number',
-    required: true,
+    required: false,
   })
   caracteristicasInternas: number[];
 
   @property({
     type: 'array',
     itemType: 'number',
-    required: true,
+    required: false,
   })
   caracteristicasExternas: number[];
 

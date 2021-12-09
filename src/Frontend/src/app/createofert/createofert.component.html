@@ -1,3 +1,4 @@
+
 <div class="icon__div">
   <span class="material-icons active" >edit</span>
   <div class="divisor active"></div>
@@ -6,18 +7,35 @@
   <span class="material-icons">check</span>
 </div>
 
+
+
+<form [formGroup]="formExample" method="post" >
 <div class="category">
   <p class="title">Category</p>
   <div class="contact">
     <p>Housing</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
+    <select  formControlName="type">
+      <option value="House">House</option>
+      <option value="Apartament">Apartament</option>
     </select>
   </div>
   <div class="contact">
     <p>Sale</p>
-    <select id="city">
+    <select formControlName="category">
+      <option *ngFor="let cato of cat;" value="{{cato.id}}"> {{cato.nombre}}</option>
+    </select>
+  </div>
+
+
+  <div class="contact">
+    <p>Departament</p>
+    <select formControlName="departament">
+      <option value="Antioquia">Antioquia</option>
+    </select>
+  </div>
+  <div class="contact">
+    <p>City</p>
+    <select formControlName="city">
       <option value="Medellin">Medellin</option>
       <option value="Itagui">Itagui</option>
     </select>
@@ -25,157 +43,70 @@
 </div>
 
 <div class="general">
-    <p class="title">General information</p>
+    <p  class="title">General information</p>
 
   <div>
     <p>Title</p>
-    <input type="text" />
+    <input formControlName="title" type="text" />
   </div>
 
   <div class="contact__mensage">
     <p>Explanation</p>
-    <textarea></textarea>
+    <textarea formControlName="description"></textarea>
   </div>
 
   <div class="general__more">
     <div>
       <p>Price</p>
-      <input type="number" />
+      <input formControlName="price" type="number" />
     </div>
-    <div class="contact">
-        <p>Type</p>
-        <select id="city">
-          <option value="Medellin">Medellin</option>
-          <option value="Itagui">Itagui</option>
-        </select>
-      </div>
   </div>
 
   <div>
     <p>Number of Room</p>
-    <input type="number" />
+    <input formControlName="rooms" type="number" />
   </div>
 
   <div>
     <p>Number of Living Room</p>
-    <input type="number" />
+    <input formControlName="roomsl" type="number" />
   </div>
 
   <div>
     <p>Gross M<sup>2</sup></p>
-    <input type="number" />
+    <input formControlName="size" type="number" />
   </div>
 
   <div>
     <p>Net M<sup>2</sup></p>
-    <input type="number" />
+    <input formControlName="sizen" type="number" />
   </div>
 
-  <div class="general__more">
-  <div class="contact">
-    <p>Warming Type</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
-    </select>
-  </div>
-</div>
 
   <div>
     <p>Building Age</p>
-    <input type="number" />
+    <input formControlName="age" type="number" />
   </div>
 
-  <div>
-    <p>Floor Location</p>
-    <input type="text" />
-  </div>
-
-  <div class="contact">
-    <p>Available for Loan</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
-    </select>
-  </div>
-
-  <div class="contact">
-    <p>Furnished</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
-    </select>
-  </div>
-
-  <div class="contact">
-    <p>Status</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
-    </select>
-  </div>
-
-  <div class="general__more">
-    <div>
-      <p>Dues</p>
-      <input type="text" />
-    </div>
-    <div class="contact">
-        <p>Type</p>
-        <select id="city">
-          <option value="Medellin">Medellin</option>
-          <option value="Itagui">Itagui</option>
-        </select>
-      </div>
 
 
-      
-  </div>
-
-  <div class="contact">
-    <p>Swap</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
-    </select>
-  </div>
-
-  <div class="contact">
-    <p>Front</p>
-    <select id="city">
-      <option value="Medellin">Medellin</option>
-      <option value="Itagui">Itagui</option>
-    </select>
-  </div>
-
-  <div class="general__more">
-    <div>
-      <p>Rental Income</p>
-      <input type="number" />
-    </div>
-    <div class="contact">
-        <p>Type</p>
-        <select id="city">
-          <option value="Medellin">Medellin</option>
-          <option value="Itagui">Itagui</option>
-        </select>
-      </div>
-  </div>
 
 </div>
-
+<form [formGroup]="formFile" method="post" >
 <div class="posting">
+  form
     <p class="title">Posting Photos</p>
     <div>
         <span class="material-icons">
             folder
             </span>
-        <p>You can add 30 photos to your add</p>
-        <input class="file" type="file" multiple>
+        <p>You can add 5 photos to your add</p>
+        <input id="files" formControlName="file" class="file" type="file" multiple>
     </div>
 
 </div>
-
+</form>
+<!--
 <div class="features">
     <p class="title">Features</p>
     <p class="subtitle">internal</p>
@@ -226,9 +157,7 @@
         <label for=""><input type="checkbox" name="" id="">Lorem</label>
     </div>
 </div>
-
+-->
 <div class="button">
-  <a href="/previewpublish">
-    <button><p class="title">Next</p></button>
-  </a>
+    <button [disabled]="!formExample.valid" (click)="send()"><p class="title">Next</p></button>
 </div>

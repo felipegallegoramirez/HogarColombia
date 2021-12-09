@@ -25,6 +25,7 @@ import { DownloadComponent } from './download/download.component';
 import { AdmonComponent } from './admon/admon.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuRolesDirective } from './menu-roles.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     StatsComponent,
     DownloadComponent,
     AdmonComponent,
+    MenuRolesDirective,
   ],
   imports: [
     BrowserModule,
