@@ -79,9 +79,9 @@ export class CreateofertComponent implements OnInit {
     ];
     let date = {
       departamento: this.formExample.value.departament,
-      ciudad: this.formExample.value.departament,
+      ciudad: this.formExample.value.city,
       direccion: this.formExample.value.departament,
-      tipoOferta: this.formExample.value.departament,
+      tipoOferta: this.formExample.value.type,
       pathFotografias: images,
       caracteristicasInternas: [],
       caracteristicasExternas: [],

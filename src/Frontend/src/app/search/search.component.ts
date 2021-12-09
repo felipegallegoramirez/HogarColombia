@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import{ Inmueble } from '../models/inmueble'
 
 @Component({
   selector: 'app-search',
@@ -21,7 +22,22 @@ export class SearchComponent implements OnInit {
     this.size="128"
    }
 
-  ngOnInit(): void {
+   cat: Array<Inmueble> = [];
+
+   async ngOnInit(): Promise<void> {
+    this.cat = await this.obtenerCateogry();
   }
 
+
+  redirect(id:string):void {
+    window.location.replace("http://localhost:4200/view/"+id);
+  }
+
+
+  async obtenerCateogry(): Promise<Inmueble[]> {
+    let url = 'http://localhost:3000/inmuebles';
+    const respuesta = await fetch(url);
+    const datos = (await respuesta.json()) as Inmueble[];
+    return datos;
+  }
 }

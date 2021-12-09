@@ -57,7 +57,7 @@ import { MenuRolesDirective } from './menu-roles.directive';
       { path: 'aboutus', component: AboutUsComponent },
       { path: 'login', component: LoginComponent },
       { path: 'search', component: SearchComponent },
-      { path: 'view', component: ViewofertComponent },
+      { path: 'view/:id', component: ViewofertComponent },
       { path: 'create', component: CreateofertComponent},
       { path: 'finishpublish', component: PublishofertComponent },
       { path: 'previewpublish', component: PreviewofertComponent },

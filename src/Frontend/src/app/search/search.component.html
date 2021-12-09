@@ -37,103 +37,13 @@
     </div>
     <div class="container__div">
 
-        <div class="card">
-            <div class="card__image"></div>
+        <div class="card" *ngFor="let cato of cat;" (click)="redirect(cato.id)">
+            <img class="card__image" src="http://localhost:3000/archivo/1/{{ cato.pathFotografias[0] }}">
             <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__image"></div>
-            <div class="card__text">
-              <h2>{{ price }}$</h2>
-              <p>{{ type }} for {{ state }}</p>
-              <p>{{ ubication }}</p>
-              <p>{{ size }} mt<sup>2</sup></p>
+              <h2>{{ cato.general[0] }}$</h2>
+              <p>type</p>
+              <p>{{ cato.ciudad }}</p>
+              <p>{{ cato.general[3] }} mt<sup>2</sup></p>
             </div>
         </div>
         

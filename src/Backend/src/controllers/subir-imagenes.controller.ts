@@ -5,12 +5,15 @@ import {
   Request,
   requestBody,
   Response,
-  RestBindings
+  RestBindings,
+  get,oas
 } from '@loopback/rest';
 import multer from 'multer';
 import path from 'path';
 import {Keys as llaves} from '../config/keys';
-
+import fs from 'fs';
+import {promisify} from 'util';
+const readdir = promisify(fs.readdir);
 
 export class SubirImagenesController {
   constructor(
@@ -78,7 +81,7 @@ export class SubirImagenesController {
     @inject(RestBindings.Http.RESPONSE) response: Response,
     @requestBody.file() request: Request,
   ): Promise<object | false> {
-    const rutaDocumentoPersona = path.join(__dirname, llaves.carpetaDocumentoPersona);
+    const rutaDocumentoPersona = path.join(__dirname, llaves.carpetaDocumento);
     let res = await this.StoreFileToPath(rutaDocumentoPersona, llaves.nombreCampoDocumentoPersona, request, response, llaves.extensionesPermitidasDOC);
     if (res) {
       const nombre_archivo = response.req?.file?.filename;
@@ -143,5 +146,56 @@ export class SubirImagenesController {
   }
 
 
+    /**
+   *
+   * @param type
+   * @param recordId
+   * @param response
+   */
+     @get('/archivo/{type}/{filename}')
+     @oas.response.file()
+     async descargarArchivo(
+       @param.path.number('type') type: number,
+       @param.path.string('filename') filename: string,
+       @inject(RestBindings.Http.RESPONSE) response: Response,
+     ) {
+       const rutaCarpeta = this.ObtenerRutaDeCarpetaPorTipo(type);
+       const archivo = this.ValidarNombreArchivo(rutaCarpeta, filename);
+       response.download(archivo, rutaCarpeta);
+       return response;
+     }
+   
+     /**
+      * Get the folder when files are uploaded by type
+      * @param type
+      */
+     private ObtenerRutaDeCarpetaPorTipo(type: number) {
+       let ruta = '';
+       switch (type) {
+         // mascota
+         case 1:
+           ruta = path.join(__dirname, llaves.carpetaImagen);
+           break;
+   
+         case 2:
+           ruta = path.join(__dirname, llaves.carpetaDocumento);
+       }
+       return ruta;
+     }
+
+       /**
+   * Validate file names to prevent them goes beyond the designated directory
+   * @param fileName - File name
+   */
+  private ValidarNombreArchivo(archivo: string, folder: string) {
+    const resolved = path.resolve(archivo, folder);
+    if (resolved.startsWith(archivo)) return resolved;
+    // The resolved file is outside sandbox
+    throw new HttpErrors[400](`La ruta del archivo es inválida: ${folder}`);
+  }
+
 }
+
+
+
 

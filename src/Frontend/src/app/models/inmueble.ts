@@ -1,7 +1,7 @@
 
 
 
-  export interface Cliente{
+  export interface Inmueble{
     id: string;
     departamento: string;
     ciudad: string;

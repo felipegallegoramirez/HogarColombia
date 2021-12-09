@@ -73,8 +73,9 @@ p{
 .card .card__image{
     border-radius: 10px 10px 0px 0px;
     height: 150px;
-    background: url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
-    background-size:cover ;
+    width: 100%;
+    object-fit: cover;
+
 }
 .card .card__text{
     width: 100%;
@@ -83,6 +84,7 @@ p{
 }
 
 .card .card__text p{
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
     color: #111b;
+    width: 100%;
 }
