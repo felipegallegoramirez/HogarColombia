@@ -1,1 +1,75 @@
+<header>
+    <div class="header_container">
+      <div class="header__right">
+
+        <div class="container__logo">
+          <img src="./assets/HouseColombia.png" />
+          <div class="container__logo_div">
+            <p><b>Hogar</b></p>
+            <p>Colombia</p>
+          </div>
+        </div>
+
+        <div class="container__links">
+          
+            <a id="Search" href="/search">Search</a>
+            <a id="My requests" href="/request">My requests</a>
+
+            <a id= "My statistics" href="/stats">My statistics</a>
+            <a id= "Create inmueble" href="/create">Create inmueble</a>
+            <a id= "Requests" href="/requestasesor">Requests</a>
+
+            <a id="Registration category" href="/newcategory">Registration category</a>
+            <a id="Data" href="/download">Data</a>
+            <a id= "Order Viewer" href="/admon">Order Viewer </a>
+
+            <a id="About Us" href="/aboutus">About Us</a>
+
+        </div>
+
+      </div>
+      
+      <div class="header__left">
+        <div class="container__porfile">
+          <div>
+            <a id="login" href="/login"><button>Login</button></a>
+            <p id="nombre">{{nombre}}</p>
+          </div>
+          <span id="icono" class="material-icons">account_circle</span>
+          <a id= "salir" (click)="cerrarSesion()" ><span class="material-icons">exit_to_app</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
 <router-outlet><!--Aca se muestra las paginas--></router-outlet>
+
+<footer>
+    <div class="footer_container">
+      <div class="footer__left">
+        <div class="footer__logo">
+          <img src="./assets/HouseColombia.png" />
+          <div class="footer__logo_div">
+            <p><b>Hogar</b></p>
+            <p>Colombia</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__right">
+        <div class="footer__links">
+          <p>Hogar Colombia</p>
+          <a href="">Search</a>
+          <a href="">Request</a>
+          <a href="">About Us</a>
+        </div>
+
+        <div class="footer__legal">
+          <a href="">Terms and conditions of use</a>
+          <a href="">Cookies</a>
+          <a href="">Use and standard of privacy</a>
+        </div>
+      </div>
+    </div>
+    <div class="credits">
+       <p>Copyright &copy; EzCo all rightsreserved 2021 </p>
+    </div>
+  </footer>

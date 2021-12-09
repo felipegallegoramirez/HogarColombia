@@ -13,6 +13,12 @@ export class Administrador extends Entity {
     type: 'string',
     required: true,
   })
+  rol: string;
+  
+  @property({
+    type: 'string',
+    required: true,
+  })
   nombre: string;
 
   @property({

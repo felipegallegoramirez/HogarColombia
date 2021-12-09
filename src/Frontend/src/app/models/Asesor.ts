@@ -1,5 +1,5 @@
 export interface Asesor{
-    id: string;
+    id: string,
     nombre: String,
     apellido: String,
     celular: String,

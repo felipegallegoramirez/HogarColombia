@@ -54,7 +54,6 @@ import { MenuRolesDirective } from './menu-roles.directive';
     MatIconModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent },
       { path: 'aboutus', component: AboutUsComponent },
       { path: 'login', component: LoginComponent },
       { path: 'search', component: SearchComponent },

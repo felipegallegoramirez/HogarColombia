@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ControlContainer, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {Cliente} from '../models/Cliente'
 import {Asesor} from '../models/Asesor';
-
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -63,8 +63,9 @@ export class LoginComponent implements OnInit {
     
     if (resultado) {
       if (resultado.contrasena == this.formExample.value.password) {
-        //window.location.replace("http://localhost:4200/search");
-        localStorage.setItem('id', resultado.id);
+        window.location.replace("http://localhost:4200/search");
+        localStorage.setItem('persona', JSON.stringify(resultado));
+        //persona = JSON.parse(localStorage.getItem('persona'))
       }else{
         console.log("la contraseña es incorrecta"
         )
