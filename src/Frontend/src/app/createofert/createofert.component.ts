@@ -8,6 +8,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { query } from '@angular/animations';
+import { CategoryView } from '../models/CategoryView'
+import { Inmueble } from '../models/inmueble';
 
 @Component({
   selector: 'app-createofert',
@@ -59,6 +61,27 @@ export class CreateofertComponent implements OnInit {
 
   }
 
+  async obtenerViewsD(id: string): Promise<string>{
+
+    let url = 'http://localhost:3000/registro-categorias/'+id;
+    const respuesta = await fetch(url);
+    const datos = (await respuesta.json()) as Category;
+
+    return await this.obtenerViews(datos.categoriaBusquedaId)
+  
+  }
+
+  async obtenerViews(id: string): Promise<string>{
+
+    
+    let url1= "http://localhost:3000/categoria-busquedas/"+id
+    const respuesta1 = await fetch(url1)
+    const datos1 = await respuesta1.json() as CategoryView
+    console.log(datos1)
+    return datos1.nombre
+  
+  }
+
   async send(): Promise<void> {
     let url = 'http://localhost:3000/inmuebles';
 
@@ -77,6 +100,11 @@ export class CreateofertComponent implements OnInit {
       String(this.formExample.value.sizen),
       String(this.formExample.value.age),
     ];
+    let data= localStorage.getItem('persona')
+    //@ts-ignore
+    let asesor=JSON.parse(data)
+
+    let noc=await this.obtenerViewsD(this.formExample.value.category)
     let date = {
       departamento: this.formExample.value.departament,
       ciudad: this.formExample.value.city,
@@ -85,13 +113,16 @@ export class CreateofertComponent implements OnInit {
       pathFotografias: images,
       caracteristicasInternas: [],
       caracteristicasExternas: [],
-      asesorId: localStorage.getItem('id'),
+      asesorId: asesor.id,
       registroCategoriaId: this.formExample.value.category,
 
       title: this.formExample.value.title,
       description: this.formExample.value.description,
       general: genera,
+      categoria: noc
     };
+
+    console.log(date)
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(date),
@@ -101,7 +132,11 @@ export class CreateofertComponent implements OnInit {
     })
       .then((res) => res.json())
       .then((mensaje) => {
-        console.log(mensaje);
+        
+        let ventana= mensaje as Inmueble
+        console.log(ventana)
+        window.location.replace("http://localhost:4200/previewpublish/"+ventana.id);
+        
       });
 
     this.formExample.reset();

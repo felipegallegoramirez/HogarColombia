@@ -49,6 +49,12 @@ export class Inmueble extends Entity {
   })
   tipoOferta: string;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  categoria: string;
+
   
   @property({
     type: 'array',

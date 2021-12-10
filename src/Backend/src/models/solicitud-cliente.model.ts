@@ -26,19 +26,19 @@ export class SolicitudCliente extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   comentarios: string;
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   pathContrato: string;
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   pathContratoFirmado: string;
 

@@ -7,101 +7,91 @@
 </div>
 
 <div class="basic">
-      <div class="basic__left__images">
-        <div class="basic__left__images_inf">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+  <div class="basic__left__images">
+    <div class="basic__left__images_inf">
+      <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[0] }}" alt="">
+      <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[1] }}" alt="">
+      <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[2] }}" alt="">
     </div>
+  </div>
 </div>
 <div class="basic2">
-    <div class="basic__left__text">
-        <div class="basic__left__title">
-          <p class="title">Lorem</p>
+  <div class="basic__left__text">
+    <div class="basic__left__title">
+      <p class="title">{{ dates.title }}</p>
+      <p>{{ dates.tipoOferta }}</p>
+    </div>
+    <div class="basic__left__price">
+      <p class="title">{{ dates.general[0] }}$</p>
+    </div>
+  </div>
+
+  <div class="general_information">
+    <p class="title">General information</p>
+    <div class="general_information__left">
+      <div>
+        <p>Rooms</p>
+        <p>{{ dates.general[1] }}</p>
+      </div>
+      <div>
+        <p>Living Rooms</p>
+        <p>{{ dates.general[2] }}</p>
+      </div>
+      <div>
+        <p>Size</p>
+        <p>{{ dates.general[3] }}</p>
+      </div>
+      <div>
+        <p>Net Size</p>
+        <p>{{ dates.general[4] }}</p>
+      </div>
+      <div>
+        <p>Age</p>
+        <p>{{ dates.general[5] }}</p>
+      </div>
+    </div>
+    <!--
+    <div class="general_information__right">
+        <div>
+          <p>Lorem</p>
           <p>Lorem</p>
         </div>
-        <div class="basic__left__price">
-          <p class="title">12317524313$</p>
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
+        </div>
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
+        </div>
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
+        </div>
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
+        </div>
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
+        </div>
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
         </div>
       </div>
+      -->
+  </div>
 
+  <div class="explanation">
+    <p class="title">Explanation</p>
+    <p>
+      {{ dates.description }}
+    </p>
+  </div>
 
-
-      <div class="general_information">
-        <p class="title">General information</p>
-        <div class="general_information__left">
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-          <div>
-            <p>Lorem</p>
-            <p>Lorem</p>
-          </div>
-        </div>
-    
-        <div class="general_information__right">
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-          </div>
-    
-      </div>
-    <div class="explanation">
-      <p class="title">Explanation</p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem consequuntur
-        sint omnis commodi, accusamus mollitia, atque officia repudiandae temporibus
-        earum fugit ducimus. Vitae fugiat architecto molestiae aut amet cupiditate
-        eveniet.
-      </p>
-    </div>
+  <!--
     
     <div class="charasterist">
         <div class="interior">
@@ -130,7 +120,7 @@
         </div>
 
 
-    
+    -->
 </div>
 
 <div class="button">

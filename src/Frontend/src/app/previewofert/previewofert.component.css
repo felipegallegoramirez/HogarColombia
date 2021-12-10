@@ -35,12 +35,11 @@ p{
     text-align: end;
     vertical-align: 5px;
 }
-.basic__left__images_inf div{
+.basic__left__images_inf img{
     width: calc(26.6vw - 40px - 10px );
     height: calc(26.6vw - 40px - 10px );
-    background:url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
     margin: 10px 0px 0px 40px;
-    background-size:cover ;
+    object-fit: cover;
 }
 
 

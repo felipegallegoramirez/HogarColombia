@@ -1,64 +1,65 @@
+<div class="modal disable" id="modal" >
+  <div>
+    <p class="title">{{asesor.nombre}} {{asesor.apellido}}</p>
+    <p>{{asesor.celular}}</p>
+    <button (click)="solicitar()">Request</button>
+    <button (click) = "cerrar()">cerrar</button>
+  </div>
+</div>
+
 <div class="basic">
   <div class="basic__left">
     <div class="basic__left__text">
       <div class="basic__left__title">
-        <p class="title">Lorem</p>
-        <p>Lorem</p>
+        <p class="title">{{dates.title}}</p>
+        <p>{{dates.tipoOferta}}</p>
       </div>
       <div class="basic__left__price">
-        <p class="title">12317524313$</p>
+        <p class="title">{{dates.general[0]}}$</p>
       </div>
     </div>
     <div class="basic__left__images">
-      <div class="basic__left__images_sup"></div>
+      <img class="basic__left__images_sup" src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[0] }}">
       <div class="basic__left__images_inf">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[1] }}">
+        <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[2] }}">
+        <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[3] }}">
+        <img src="http://localhost:3000/archivo/1/{{ dates.pathFotografias[4] }}">
       </div>
     </div>
   </div>
   
   <div class="basic__right">
     <div class="porfile"></div>
-    <p class="title">Fernando Javier</p>
-    <button><span></span>View Phone</button>
+    <p class="title">{{asesor.nombre}} {{asesor.apellido}}</p>
+    <button (click) = "ver()"><span></span>View Phone</button>
   </div>
 
   <div class="general_information">
     <p class="title">General information</p>
     <div class="general_information__left">
       <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
+        <p>Rooms</p>
+        <p>{{dates.general[1]}}</p>
       </div>
       <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
+        <p>Living Rooms</p>
+        <p>{{dates.general[2]}}</p>
       </div>
       <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
+        <p>Size</p>
+        <p>{{dates.general[3]}}</p>
       </div>
       <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
+        <p>Net Size</p>
+        <p>{{dates.general[4]}}</p>
       </div>
       <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-      <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
-      </div>
-      <div>
-        <p>Lorem</p>
-        <p>Lorem</p>
+        <p>Age</p>
+        <p>{{dates.general[5]}}</p>
       </div>
     </div>
-
+<!--
     <div class="general_information__right">
         <div>
           <p>Lorem</p>
@@ -89,19 +90,17 @@
           <p>Lorem</p>
         </div>
       </div>
+      -->
 
   </div>
 </div>
 <div class="explanation">
   <p class="title">Explanation</p>
   <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem consequuntur
-    sint omnis commodi, accusamus mollitia, atque officia repudiandae temporibus
-    earum fugit ducimus. Vitae fugiat architecto molestiae aut amet cupiditate
-    eveniet.
+  {{dates.description}}
   </p>
 </div>
-
+<!--
 <div class="charasterist">
     <div class="interior">
         <p class="title">Lorem</p>
@@ -129,3 +128,6 @@
     </div>
 
 </div>
+-->
+<br>
+

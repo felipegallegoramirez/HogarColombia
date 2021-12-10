@@ -37,16 +37,14 @@ p{
 .basic__left__images_sup{
     width: calc(70vw - 80px);
     height: 40vh;
-    background:url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
-    background-size:cover ;
+    object-fit:cover ;
     margin: 10px 0px 0px 40px;
 }
-.basic__left__images_inf div{
+.basic__left__images_inf img{
     width: calc(17.5vw - 40px - 10px );
     height: calc(17.5vw - 40px - 10px );
-    background:url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
     margin: 10px 0px 0px 40px;
-    background-size:cover ;
+    object-fit:cover ;
 }
 .basic__right{
 text-align: center;
@@ -128,4 +126,31 @@ button {
 }
 .charasterist div p:first-child{
     color:black;
+}
+
+.modal {
+    width: 100vw;
+    height: 150%;
+    position: absolute;
+    background-color: #0004;
+    margin: -100px 0px;
+}
+
+.modal div{
+    text-align: center;
+    background-color: white;
+    padding: 40px 10px;
+    width: 300px;
+    margin: 200px auto;
+ 
+    
+}
+
+.modal div p{
+margin: 20px;
+    
+}
+
+.disable{
+    visibility:hidden ; 
 }

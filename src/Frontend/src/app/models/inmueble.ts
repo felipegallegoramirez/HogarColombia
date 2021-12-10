@@ -15,5 +15,6 @@
 
     title:string;
     description:string;
-    general:Array<String>
+    general:Array<String>;
+    categoria:string;
 }

@@ -60,7 +60,7 @@ import { MenuRolesDirective } from './menu-roles.directive';
       { path: 'view/:id', component: ViewofertComponent },
       { path: 'create', component: CreateofertComponent},
       { path: 'finishpublish', component: PublishofertComponent },
-      { path: 'previewpublish', component: PreviewofertComponent },
+      { path: 'previewpublish/:id', component: PreviewofertComponent },
       { path: 'dateUser', component: DateUserComponent },
       { path: 'request', component: LisstRequiestUComponent },
       { path: 'dateAssesor', component: DateAsesorComponent },
