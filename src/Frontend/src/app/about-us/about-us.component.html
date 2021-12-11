@@ -24,115 +24,34 @@
   <h2>Featured sales</h2>
   <div class="oferts__sales">
     <div class="cards__container">
-      <a href="/view">
-
-        <div class="card">
-          <div class="card__image"></div>
-          <div class="card__text">
-            <h2>{{ price }}$</h2>
-            <p>{{ type }} for {{ state }}</p>
-            <p>{{ ubication }}</p>
-            <p>{{ size }} mt<sup>2</sup></p>
-          </div>
-        </div>
-
-      </a>
-
-
-      <div class="card">
-        <div class="card__image"></div>
+      
+      <div class="card" *ngFor="let inmueble of inmueblesSale;" (click)="redirect(inmueble.id)">
+        <img class="card__image" src="http://localhost:3000/archivo/1/{{ inmueble.pathFotografias[0] }}">
         <div class="card__text">
-          <h2>{{ price }}$</h2>
-          <p>{{ type }} for {{ state }}</p>
-          <p>{{ ubication }}</p>
-          <p>{{ size }} mt<sup>2</sup></p>
+          <h2>{{ inmueble.general[0] }}$</h2>
+          <p>type</p>
+          <p>{{ inmueble.ciudad }}</p>
+          <p>{{ inmueble.general[3] }} mt<sup>2</sup></p>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__text">
-          <h2>{{ price }}$</h2>
-          <p>{{ type }} for {{ state }}</p>
-          <p>{{ ubication }}</p>
-          <p>{{ size }} mt<sup>2</sup></p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__text">
-          <h2>{{ price }}$</h2>
-          <p>{{ type }} for {{ state }}</p>
-          <p>{{ ubication }}</p>
-          <p>{{ size }} mt<sup>2</sup></p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__text">
-          <h2>{{ price }}$</h2>
-          <p>{{ type }} for {{ state }}</p>
-          <p>{{ ubication }}</p>
-          <p>{{ size }} mt<sup>2</sup></p>
-        </div>
-      </div>
     </div>
   </div>
   <h2>Featured rents</h2>
   <div class="oferts__rental">
     <div class="oferts__sales">
       <div class="cards__container">
-        <div class="card">
-          <div class="card__image"></div>
+
+        <div class="card" *ngFor="let inmueble of inmueblesRent;" (click)="redirect(inmueble.id)">
+          <img class="card__image" src="http://localhost:3000/archivo/1/{{ inmueble.pathFotografias[0] }}">
           <div class="card__text">
-            <h2>{{ price }}$</h2>
-            <p>{{ type }} for {{ state }}</p>
-            <p>{{ ubication }}</p>
-            <p>{{ size }} mt<sup>2</sup></p>
+            <h2>{{ inmueble.general[0] }}$</h2>
+            <p>type</p>
+            <p>{{ inmueble.ciudad }}</p>
+            <p>{{ inmueble.general[3] }} mt<sup>2</sup></p>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card__image"></div>
-          <div class="card__text">
-            <h2>{{ price }}$</h2>
-            <p>{{ type }} for {{ state }}</p>
-            <p>{{ ubication }}</p>
-            <p>{{ size }} mt<sup>2</sup></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image"></div>
-          <div class="card__text">
-            <h2>{{ price }}$</h2>
-            <p>{{ type }} for {{ state }}</p>
-            <p>{{ ubication }}</p>
-            <p>{{ size }} mt<sup>2</sup></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image"></div>
-          <div class="card__text">
-            <h2>{{ price }}$</h2>
-            <p>{{ type }} for {{ state }}</p>
-            <p>{{ ubication }}</p>
-            <p>{{ size }} mt<sup>2</sup></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image"></div>
-          <div class="card__text">
-            <h2>{{ price }}$</h2>
-            <p>{{ type }} for {{ state }}</p>
-            <p>{{ ubication }}</p>
-            <p>{{ size }} mt<sup>2</sup></p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
