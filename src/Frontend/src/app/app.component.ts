@@ -78,6 +78,7 @@ export class AppComponent implements OnInit {
     document.getElementById("salir")!.style.display = "inline-block";
     document.getElementById("nombre")!.style.display = "inline-block";
   }
+  
   menuAsesor( usuario: Asesor){
     document.getElementById("Search")!.style.display = "none";
     document.getElementById("My requests")!.style.display = "none";
@@ -95,6 +96,7 @@ export class AppComponent implements OnInit {
     document.getElementById("salir")!.style.display = "inline-block";
     document.getElementById("nombre")!.style.display = "inline-block";
   }
+  
   menuAdmin( usuario: administrador){
     document.getElementById("Search")!.style.display = "none";
     document.getElementById("My requests")!.style.display = "none";
@@ -117,7 +119,5 @@ export class AppComponent implements OnInit {
     localStorage.removeItem("persona");
     window.location.replace("http://localhost:4200/aboutus");
   }
-
-
 
 }
