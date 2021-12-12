@@ -1,20 +1,26 @@
 <div class="filtre">
     <div>
-        <select id="departament">
+        <select id="city">
             <option value="">City</option>
+            <option value="Medellin">Medellin</option>
+            <option value="Itagui">Itagui</option>
         </select>
     </div>
     <div>
-        <select id="departament">
+        <select id="type">
             <option value="">Type</option>
+            <option value="House">House</option>
+            <option value="Apartament">Apartament</option>
         </select>
     </div>
     <div>
-        <select id="departament">
+        <select id="ofert">
             <option value="">Shop - Rent</option>
+            <option value="vent">Vent</option>
+            <option value="Rent">Rent</option>
         </select>
     </div>
-    <div>
+    <div (click)="onRecreate()" >
         <input type="text">
         <span class="material-icons">search</span>
     </div>
@@ -23,7 +29,7 @@
 <div class="container">
     <div class="container__text">
         <h2>Results:</h2>
-        <p>(123123)</p>
+        <p>{{size}}</p>
     </div>
     <div class="container__div">
 

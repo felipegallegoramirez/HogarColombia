@@ -28,9 +28,17 @@ button {
 
 .list{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: 40px auto;
     width: 80%;
+    box-sizing: border-box;
+}
+
+.list__i{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 40px auto;
+    width: 100%;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -56,6 +64,5 @@ color: #000a;
     border-radius: 10px 10px 0px 0px;
     height: 70px;
     width: 70px;
-    background: url('https://q-xx.bstatic.com/images/hotel/max1024x768/237/237070641.jpg');
-    background-size:cover ;
+    object-fit: cover;
 }
